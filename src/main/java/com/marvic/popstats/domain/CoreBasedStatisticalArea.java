@@ -1,5 +1,7 @@
 package com.marvic.popstats.domain;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.Objects;
@@ -12,6 +14,7 @@ import java.util.StringJoiner;
  * of at least 10,000 population, plus adjacent counties having a high degree of social and
  * economic integration with the core as measured through commuting ties.
  */
+@Document
 public class CoreBasedStatisticalArea extends StatisticalReportingArea {
 
     private StatisticalAreaType areaType;

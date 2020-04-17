@@ -1,11 +1,14 @@
 package com.marvic.popstats.domain;
 
+import org.springframework.data.mongodb.core.mapping.MongoId;
+
 import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.Objects;
 
 public abstract class StatisticalReportingArea {
 
+    @MongoId
     private String code;
     private String title;
     private List<PopulationEstimate> populationEstimates;
