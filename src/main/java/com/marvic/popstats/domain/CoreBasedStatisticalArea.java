@@ -14,7 +14,7 @@ import java.util.StringJoiner;
  * of at least 10,000 population, plus adjacent counties having a high degree of social and
  * economic integration with the core as measured through commuting ties.
  */
-@Document
+@Document(collection = "coreBasedStatisticalAreas")
 public class CoreBasedStatisticalArea extends StatisticalReportingArea {
 
     private StatisticalAreaType areaType;
