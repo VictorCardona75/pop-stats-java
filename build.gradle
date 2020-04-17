@@ -8,6 +8,13 @@ group = 'com.marvic'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
+sourceSets {
+    integrationTest {
+        compileClasspath += sourceSets.main.output
+        runtimeClasspath += sourceSets.main.output
+    }
+}
+
 configurations {
     developmentOnly
     runtimeClasspath {
@@ -15,6 +22,12 @@ configurations {
     }
     compileOnly {
         extendsFrom annotationProcessor
+    }
+    integrationTestImplementation {
+        extendsFrom testImplementation
+    }
+    integrationTestRuntimeOnly {
+        extendsFrom runtimeOnly
     }
 }
 
@@ -31,8 +44,16 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    integrationTestImplementation 'io.rest-assured:rest-assured:4.3.0'
 }
 
 test {
+    useJUnitPlatform()
+}
+
+task integrationTest(type: Test) {
+    testClassesDirs = sourceSets.integrationTest.output.classesDirs
+    classpath = sourceSets.integrationTest.runtimeClasspath
+    shouldRunAfter test
     useJUnitPlatform()
 }
