@@ -3,7 +3,7 @@ package com.marvic.popstats.api;
 import java.util.List;
 
 public final class Result<T> {
-    private List<T> payload;
+    private final List<T> payload;
 
     public Result(List<T> payload) {
         if (payload == null) {
