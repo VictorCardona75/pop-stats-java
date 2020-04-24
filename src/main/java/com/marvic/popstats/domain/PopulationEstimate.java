@@ -12,16 +12,15 @@ import java.util.StringJoiner;
  * {@link StatisticalReportingArea} on the specified date.  The estimate also contains references
  * to all of the components used to make the estimate.
  */
-public class PopulationEstimate {
-
-    private LocalDate date;
-    private long value;
-    private long numericChangeFromLast;
-    private boolean fromCensus;
-    private boolean base;
-    private NaturalIncrease naturalIncrease;
-    private NetMigration netMigration;
-    private Residual residual;
+public final class PopulationEstimate {
+    private final LocalDate date;
+    private final long value;
+    private final long numericChangeFromLast;
+    private final boolean fromCensus;
+    private final boolean base;
+    private final NaturalIncrease naturalIncrease;
+    private final NetMigration netMigration;
+    private final Residual residual;
 
     public PopulationEstimate(@NotNull LocalDate date, long value, long numericChangeFromLast,
                               boolean fromCensus, boolean base, @Nullable NaturalIncrease naturalIncrease,
@@ -101,5 +100,4 @@ public class PopulationEstimate {
     public Residual getResidual() {
         return residual;
     }
-
 }

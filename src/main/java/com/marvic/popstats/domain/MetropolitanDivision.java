@@ -14,9 +14,9 @@ import java.util.StringJoiner;
  * with the main/secondary county or counties through commuting ties. Not all metropolitan
  * statistical areas will contain metropolitan divisions.
  */
-public class MetropolitanDivision extends StatisticalReportingArea {
+public final class MetropolitanDivision extends StatisticalReportingArea {
 
-    private List<CountyOrEquivalent> counties;
+    private final List<CountyOrEquivalent> counties;
 
     public MetropolitanDivision(@NotNull String code, @NotNull String title,
                                 @NotNull List<PopulationEstimate> populationEstimates,

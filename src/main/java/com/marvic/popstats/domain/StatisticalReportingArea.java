@@ -9,9 +9,9 @@ import java.util.Objects;
 public abstract class StatisticalReportingArea {
 
     @MongoId
-    private String code;
-    private String title;
-    private List<PopulationEstimate> populationEstimates;
+    private final String code;
+    private final String title;
+    private final List<PopulationEstimate> populationEstimates;
 
     public StatisticalReportingArea(@NotNull String code, @NotNull String title,
                                     @NotNull List<PopulationEstimate> populationEstimates) {

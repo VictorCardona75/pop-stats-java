@@ -15,11 +15,11 @@ import java.util.StringJoiner;
  * economic integration with the core as measured through commuting ties.
  */
 @Document(collection = "coreBasedStatisticalAreas")
-public class CoreBasedStatisticalArea extends StatisticalReportingArea {
+public final class CoreBasedStatisticalArea extends StatisticalReportingArea {
 
-    private StatisticalAreaType areaType;
-    private List<MetropolitanDivision> divisions;
-    private List<CountyOrEquivalent> counties;
+    private final StatisticalAreaType areaType;
+    private final List<MetropolitanDivision> divisions;
+    private final List<CountyOrEquivalent> counties;
 
     public CoreBasedStatisticalArea(@NotNull String code, @NotNull String title,
                                     @NotNull List<PopulationEstimate> populationEstimates,

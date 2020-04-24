@@ -16,7 +16,6 @@ import java.util.Optional;
 @RestController
 @RequestMapping(path = "/population/cbsas")
 public class CoreBasedStatisticalAreaController {
-
     private final CoreBasedStatisticalAreaService service;
 
     public CoreBasedStatisticalAreaController(CoreBasedStatisticalAreaService service) {

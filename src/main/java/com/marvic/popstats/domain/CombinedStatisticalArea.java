@@ -13,9 +13,9 @@ import java.util.StringJoiner;
  * entity and the percentage of employment in the smaller entity that is accounted for by workers
  * who reside in the larger entity.
  */
-public class CombinedStatisticalArea extends StatisticalReportingArea {
+public final class CombinedStatisticalArea extends StatisticalReportingArea {
 
-    private List<CoreBasedStatisticalArea> coreBasedStatisticalAreas;
+    private final List<CoreBasedStatisticalArea> coreBasedStatisticalAreas;
 
     public CombinedStatisticalArea(@NotNull String code, @NotNull String title,
                                    @NotNull List<PopulationEstimate> populationEstimates,

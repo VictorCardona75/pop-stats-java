@@ -9,13 +9,13 @@ import java.util.StringJoiner;
  * The {@code NaturalIncrease} Class represents the difference in births and deaths over the
  * specified period of time.
  */
-public class NaturalIncrease {
+public final class NaturalIncrease {
 
-    private LocalDate startDate;
-    private LocalDate endDate;
-    private long value;
-    private long births;
-    private long deaths;
+    private final LocalDate startDate;
+    private final LocalDate endDate;
+    private final long value;
+    private final long births;
+    private final long deaths;
 
     public NaturalIncrease(@NotNull LocalDate startDate, @NotNull LocalDate endDate, long value,
                            long births,

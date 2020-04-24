@@ -2,7 +2,7 @@ package com.marvic.popstats.api;
 
 import java.util.List;
 
-public class Result<T> {
+public final class Result<T> {
     private List<T> payload;
 
     public Result(List<T> payload) {

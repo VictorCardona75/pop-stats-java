@@ -10,13 +10,13 @@ import java.util.StringJoiner;
  * migration over the specified time range.  Net migration includes both international and
  * domestic components.
  */
-public class NetMigration {
+public final class NetMigration {
 
-    private LocalDate startDate;
-    private LocalDate endDate;
-    private long value;
-    private long netInternationalMigration;
-    private long netDomesticMigration;
+    private final LocalDate startDate;
+    private final LocalDate endDate;
+    private final long value;
+    private final long netInternationalMigration;
+    private final long netDomesticMigration;
 
     public NetMigration(@NotNull LocalDate startDate, @NotNull LocalDate endDate, long value,
                         long netInternationalMigration, long netDomesticMigration) {

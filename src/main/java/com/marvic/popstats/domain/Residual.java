@@ -9,11 +9,11 @@ import java.util.StringJoiner;
  * The {@code Residual} Class represents the change in population over the specified time range
  * which cannot be attributed to either natural increase or net migration.
  */
-public class Residual {
+public final class Residual {
 
-    private LocalDate startDate;
-    private LocalDate endDate;
-    private long value;
+    private final LocalDate startDate;
+    private final LocalDate endDate;
+    private final long value;
 
     public Residual(@NotNull LocalDate startDate, @NotNull LocalDate endDate, long value) {
         this.startDate = startDate;

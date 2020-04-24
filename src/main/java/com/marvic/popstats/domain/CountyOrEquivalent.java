@@ -13,9 +13,9 @@ import java.util.StringJoiner;
  * counties, or where one-quarter or more of employment is composed of workers who live in
  * central counties.
  */
-public class CountyOrEquivalent extends StatisticalReportingArea {
+public final class CountyOrEquivalent extends StatisticalReportingArea {
 
-    private CountyType countyType;
+    private final CountyType countyType;
 
     public CountyOrEquivalent(@NotNull String code, @NotNull String title,
                               @NotNull List<PopulationEstimate> populationEstimates,
